@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-candidatos-detail',
-  standalone: false,
+  standalone: true,
   templateUrl: './candidatos-detail.component.html',
   styleUrl: './candidatos-detail.component.css'
 })

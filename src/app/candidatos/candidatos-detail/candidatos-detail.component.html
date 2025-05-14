@@ -1,14 +1,24 @@
-<div>
-    <h3>{{candidato.nombre}}</h3>
-    <div>
-        <div style="width: 50%; display: inline-block;">
-            <img [src]="candidato.foto" alt="{{ candidato.nombre }}" style="width: 80%; ">
-        </div>
-        
-        <div style="width: 50%; display: inline-block;">
-            <p><strong>Pais de Origen: </strong> {{candidato.pais_origen}} </p>
-            <p><strong>Vertiente Religiosa: </strong> {{candidato.vertiente_religiosa}} </p>
-            <p><strong>Edad: </strong> {{candidato.edad}} </p>
-        </div>
+<div class="card mt-4">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="candidato?.foto" class="img-fluid rounded-start" alt="{{candidato?.foto}}">
     </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ candidato?.nombre }}</h5>
+        <hr>
+        <dl>
+          <dt>Pais de origen</dt>
+          <dd>{{ candidato?.pais_origen }}</dd>
+
+          <dt>Vertiente Religiosa</dt>
+          <dd>{{ candidato?.vertiente_religiosa }}</dd>
+
+          <dt>Edad</dt>
+          <dd>{{ candidato?.edad }}</dd>
+
+        </dl>
+      </div>
+    </div>
+  </div>
 </div>
